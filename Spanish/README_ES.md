@@ -87,7 +87,7 @@ function Person(){} var person = Person() var person = new Person()
 * Explique AJAX con tanto detalle como sea posible.
 * Explique como funciona JSONP (y como es distinto a AJAX).
 * Has utilizado alguna vez templates en Javascript?
-	* De ser asi, cuales librerias has usado (Mustache.js, Handlebars etc.) 
+	* De ser asi, cuales librerias has usado (Mustache.js, Handlebars, entre otros) 
 * Podes explicar en que consiste el "hoisting"?
 * Sabes que es el FOUC? Y como evitarlo?
 * Podes hablar sobre event bubbling. 
@@ -104,109 +104,109 @@ function Person(){} var person = Person() var person = new Person()
 ```javascript
 [1,2,3,4,5].duplicator(); // [1,2,3,4,5,1,2,3,4,5]
 ```
-* Describe a strategy for memoization (avoiding calculation repetition) in JavaScript. 
-* Why is it called a Ternary statement, what does the word "Ternary" indicate? 
+* Podes describir una estrategia para memoizacion ('memoization', evitar repetir calculos) en Javascript?
+* Porque reciben el nombre de sentencias ternarias, que significa la palabra 'Ternaria'?  
 * Que es el `arity` para una funcion?
 
-## JS-Code Examples:
+## Ejemplos de codigo de Javascript:
 
 ```javascript
 ~~3.14
 ```
-Question: What value is returned from the above statement? 
-**Answer: 3** 
+Pregunta: Cual es el retorno de la sentencia anterior?
+**Respuesta: 3** 
 
 ```javascript
 "i'm a lasagna hog".split("").reverse().join("");
 ```
-Question: What value is returned from the above statement? 
-**Answer: "goh angasal a m'i"** 
+Pregunta: Cual es el retorno de la sentencia anterior?
+**Respuesta: "goh angasal a m'i"** 
 
 ```javascript
 ( window.foo || ( window.foo = "bar" ) );
 ```
-Question: What is the value of window.foo? 
-**Answer: "bar"** 
-only if window.foo was falsey otherwise it will retain its value.
+Preguntan: Cual es el valor de window.foo?
+**Respuesta: "bar"** 
+Unicamente si window.foo tenia un valor falsey, de cualquier otra forma retendra su valor.
 
 ```javascript
 var foo = "Hello"; (function() { var bar = " World"; alert(foo + bar); })(); alert(foo + bar);
 ```
-Question: What is the outcome of the two alerts above? 
-**Answer: "Hello World" & ReferenceError: bar is not defined** 
+Pregunta: Cual es el resultado de los dos alerts anteriores?
+**Respuesta: "Hello World" y ReferenceError: bar is not defined** 
 
 ```javascript
 var foo = [];
 foo.push(1);
 foo.push(2);
 ```
-Question: What is the value of foo.length? 
-**Answer: `2`
+Pregunta: Cual es el valor de foo.length? 
+**Respuesta: `2`
 
 ```javascript
 var foo = {};
 foo.bar = 'hello';
 ```
-Question: What is the value of foo.length? 
-**Answer: `undefined`
+Pregunta: Cual es el valor de foo.length? 
+**Respuesta: `undefined`
 
 
-## jQuery-Specific Questions:
+## Preguntas especificas de jQuery:
 
-* Explain "chaining". 
-* Explain "deferreds".
-* What are som jQuery specific optimizations you can implement?
-* What does `.end()` do? 
-* How, and why, would you namespace a bound event handler? 
-* Name 4 different values you can pass to the jQuery method?
-	* Selector (string), HTML (string), Callback (function), HTMLElement, object, array, element array, jQuery Object etc.
-* What is the effects (or fx) queue? 
-* What is the difference between `.get()`, `[]`, and `.eq()`? 
-* What is the difference between `.bind()`, `.live()`, and `.delegate()`? 
-* What is the difference between `$` and `$.fn`? Or just what is `$.fn`.
-* Optimize this selector: 
+* Explica el "encadenamiento" (chaining).
+* Explica las "diferidas" (deferreds).
+* Cuales son algunas optimizaciones que se pueden implementar usando jQuery?
+* Que funcion cumple el metodo `.end()`? 
+* Como y porque, aplicaria namespacing a un event handler?
+* Nombre cuatro diferentes valores que se pueden pasar por parametro al metodo jQuery.
+	* Un selector (string), HTML (string), Callback (function), HTMLElement, objeto, arreglo, arreglo de elementos, objeto jQuery, entre otros.
+* Que es la cola de efectos (fx queue)?
+* Cual es la diferencia entre `.get()`, `[]` y `.eq()`? 
+* Cual es la diferencia entre `.bind()`, `.live()` y `.delegate()`? 
+* Cual es la diferencia entre `$` y `$.fn`? O simplemente, que es `$.fn`?
+* Optimize este selector:
 ```javascript
 $(".foo div#bar:eq(0)")
 ```
 
-## CSS-Specific Questions:
+## Preguntas espeficicas de CSS:
 
-* Describe what a "reset" CSS file does and how it's useful. 
-* Describe Floats and how they work. 
-* What are the various clearing techniques and which is appropriate for what context? 
-* Explain CSS sprites, and how you would implement them on a page or site. 
-* What are your favourite image replacement techniques and which do you use when? 
-* CSS property hacks, conditionally included .css files, or... something else? 
-* How do you serve your pages for feature-constrained browsers? 
-	* What techniques/processes do you use?  
-* What are the different ways to visually hide content (and make it available only for screen readers)? 
-* Have you ever used a grid system, and if so, what do you prefer? 
-* Have you used or implemented media queries or mobile specific layouts/CSS? 
-* Any familiarity with styling SVG? 
-* How do you optimize your webpages for print? 
-* What are some of the "gotchas" for writing efficient CSS? 
-* Do you use CSS preprocessors? (SASS, Compass, Stylus, LESS) 
-	* If so, describe what you like and dislike about the CSS preprocessors you have used. 
-* How would you implement a web design comp that uses non-standard fonts? 
-	* Webfonts (font services like: Goodle Webfonts, Typekit etc.)
-* Explain how a browser determines what elements match a CSS selector?  
+* Describa que es un "reset" y porque es util?
+* Describa los "Floats" y como funcionan.
+* Cuales son los metodos para limpiar (clear) floats y cual es apropiado para cual contexto?
+* Explica que son los sprites en CSS y como los implementarias en una pagina.
+* Cual es tu tecnica favorita para reemplazar imagenes y cuando usas cada una?
+* CSS Hacks, archivos incluidos con etiquetas condicionales o algun otro metodo?
+* Cual es tu enfoque al desarrollar paginas que dan soporte a navegadores con limitadas capacidades?
+	* Que tecnicas o procesos usas?
+* Cuales son las distintas formas para esconder contenido, pero mantenerlo disponible unicamente para screen readers?
+* Has usado algun sistema de cuadriculas (grids) y cual preferis?
+* Has usado o implementado media queres o reglas especifico para dispositivos mobiles?
+* Tenes familiaridad con darle estilos a SVGs?
+* Como optimizas tus paginas para impresion?
+* Cuales son algunos de los "trampas" al escribir CSS eficiente?
+* Has usado algun preprocesador para CSS (SASS, Compass, Stylus, LESS)? 
+	* De ser asi, podes mencionar que te gusta y que no de los que has usado?
+* Como implementarias un disenyo que usa fuentes que no son web-safe?
+	* Webfonts (usando servicios para fuentes como Goodle Webfonts, Typekit, entre otros)
+* Podes explicar como determina un navegador cuales elementos coinciden con un selector de CSS?
 
-## Optional fun Questions:
+## Preguntas opcionales y divertidas:
 
-* What's the coolest thing you've ever coded, what are you most proud of?
-* Do you know the HTML5 gang sign? 
-* Are you now, or have you ever been, on a boat. 
-* What are your favorite parts about the developer tools you use?
-* Do you have any pet projects? What kind? 
-* Explain the significance of "cornify". 
-* On a piece of paper, write down the letters A B C D E vertically. Now put these in descending order without writing one line of code. 
-	* Wait and see if they turn the paper upside down
-* Pirate or Ninja? 
-	* Bonus if it's a combo and a good reason was given (+2 for zombie monkey pirate ninjas) 
-* If not Web Development, what would you be doing? 
-* Where in the world is Carmen Sandiego?
-	* Hint: their answer is always wrong 
-* What's your favorite feature of Internet Explorer?
-* Complete this sentence: Brendan Eich and Doug Crockford are the __________ of javascript.
-* jQuery: a great library or the greatest library? Discuss.
+* Cual es la cosa mas cool que has programado y que es lo que mas te enorgullece?
+* Sabes cual es la senya pandillera (gang sign) para HTML5?
+* Estas ahora o has estado alguna vez en un bote?
+* Cuales son tus partes favoritas de las herramientas de desarrollo que usas?
+* Tenes algun proyecto personal? De que tipo?
+* Explica el significado de "cursificar" (cornify).
+* Toma un papel y escribi las letras A B C D E verticalmente, ahora ponelas en order descendiente sin escribir una sola linea de codigo.
+	* Espera a ver si giran el papel.
+* Pirata o Ninja?
+	* Puntos extra si es una combinacion y dio una buena razon, dos puntos extra por monos zombies piratas ninjas.
+* Si no estuvieras en Desarollo Web, en que estarias trabajando?
+* Donde en el mundo esta Carmen Sandiego?
+	* Consejo: no hay respuesta correcta.
+* Cual es tu funcionalidad favorita de Internet Explorer?
+* Completa esta oracion: Brendan Eich y Doug Crockford son los __________ del Javascript.
+* jQuery: una buena libreria o la mejor libreria? Explica porque.
 
